@@ -1,0 +1,23 @@
+/* 纯css实现未读消息99+ */
+/* https://www.zhangxinxu.com/wordpress/2022/01/css-show-diff-content-according-var/ */
+
+.badge {
+  position: absolute;
+  box-sizing: border-box;
+  min-width: 1rem;
+  padding: 0 0.1875rem;
+  color: #fff;
+  font-size: min(0.5rem, calc(10000px - var(--num) * 100px));
+  line-height: 1.2;
+  text-align: center;
+  background-color: #eb4646;
+  border: 1px solid #fff;
+  border-radius: 1rem;
+  transform: translate(calc(40% + 0.375rem), -0.75rem);
+  /* 数值为0的时候隐藏 */
+  opacity: var(--count, 0);
+}
+.badge::before {
+  content: '99+';
+  font-size: min(0.5rem, calc(var(--count, 0) * 100px - 9900px));
+}
