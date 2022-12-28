@@ -1,4 +1,4 @@
-import { Directive } from 'vue';
+import type { Directive } from 'vue';
 type NamedObjectDirective<T = any, V = any> = Directive<T, V> & {
   name: string;
 };
@@ -7,8 +7,6 @@ import copy from 'shared/copy';
 export default {
   name: 'clipboard',
   created(el, binding) {
-    console.log(binding.instance[binding.arg]);
-
     el._handler = () => {
       if (typeof binding.value === 'string') {
         copy(binding.value, alert);

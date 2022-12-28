@@ -1,5 +1,5 @@
 import { throttle } from 'lodash-es';
-import { ObjectDirective } from 'vue';
+import type { ObjectDirective } from 'vue';
 
 export function creator(f: any) {
   return {

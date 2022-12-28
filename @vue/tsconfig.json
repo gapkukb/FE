@@ -1,14 +1,9 @@
 {
-	"extends": "@vue/tsconfig/tsconfig.web.json",
-	"compilerOptions": {
-		"baseUrl": ".",
-		"paths": {
-			"@/*": ["./src/*"]
-		}
-	},
-	"references": [
-		{
-			"path": "./tsconfig.config.json"
-		}
-	]
+  "extends": "../tsconfig.json",
+  "compilerOptions": {},
+  "references": [
+    {
+      "path": "./tsconfig.config.json"
+    }
+  ]
 }

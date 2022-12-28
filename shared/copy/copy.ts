@@ -2,7 +2,7 @@ type Success = (text: string) => any;
 
 const isFallback = !navigator.clipboard;
 
-export default function copy(text: string, success: Success): any {
+export default function copy(text: string | undefined, success: Success): any {
   if (!text) return;
   if (!isFallback) {
     return navigator.clipboard.writeText(text).then(
