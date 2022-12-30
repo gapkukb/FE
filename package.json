@@ -6,11 +6,8 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "dev": "pnpm -F @vue/demo dev",
-    "build:vue:": "run-p type-check build-only",
-    "preview": "vite preview",
-    "build-only": "vite build",
-    "type-check": "vue-tsc --noEmit",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
+    "build:": "pnpm -F @vue/demo build",
+    "lint": "pnpm -F @vue/demo lint"
   },
   "devDependencies": {
     "@types/lodash-es": "^4.17.6",
