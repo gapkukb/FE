@@ -1,0 +1,5 @@
+{
+  "extends": "../tsconfig.common.json",
+  "compilerOptions": {},
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

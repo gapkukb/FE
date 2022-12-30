@@ -6,8 +6,9 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "dev": "pnpm -F @vue/demo dev",
-    "build:": "pnpm -F @vue/demo build",
-    "lint": "pnpm -F @vue/demo lint"
+    "build": "pnpm -F @vue/demo build",
+    "dev:react:demo": "pnpm -F @react/demo dev",
+    "build:react:demo": "pnpm -F @react/demo build"
   },
   "devDependencies": {
     "@types/lodash-es": "^4.17.6",

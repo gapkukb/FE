@@ -15,10 +15,6 @@ const emits = defineEmits<{
   (e: "emits", data: number): void;
   (e: "ws", data: string): void;
 }>();
-
-const emit = () => {
-  emits("emits", "123");
-};
 </script>
 <script>
 export default {
