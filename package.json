@@ -4,6 +4,7 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
+        "clone":"node scripts/repo",
 		"preinstall": "npx only-allow pnpm",
 		"prepare": "husky install",
 		"dev": "node scripts/selector",

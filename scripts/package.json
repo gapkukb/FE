@@ -12,7 +12,7 @@
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
-	"devDependencies": {
+	"dependencies": {
 		"inquirer": "^8.2.5"
 	}
 }
