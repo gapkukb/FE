@@ -1,2 +1,2 @@
-import define from "../vite.config.vue";
+import define from '../vite.config.vue';
 export default define();

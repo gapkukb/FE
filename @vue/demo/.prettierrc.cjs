@@ -1,4 +1,4 @@
 module.exports = {
-    ...require('../../.prettierrc.cjs'),
-    tailwindConfig: './tailwind.config.cjs',
+  ...require('../../.prettierrc.cjs'),
+  tailwindConfig: './tailwind.config.cjs',
 };

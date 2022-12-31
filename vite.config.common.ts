@@ -1,24 +1,35 @@
+/* eslint-disable */
 /* eslint-env node */
 import { fileURLToPath, URL } from 'node:url';
-import { defineConfig, UserConfigExport } from 'vite';
-import DefineOptions from 'unplugin-vue-define-options/vite';
+import { defineConfig, loadEnv } from 'vite';
+import type { UserConfig, ConfigEnv, UserConfigExport } from 'vite';
 
 import path from 'node:path';
 import process from 'node:process';
 import autoprefixer from 'autoprefixer';
 import tailwindcss from 'tailwindcss';
 import deepmerge from 'deepmerge';
+import type { Options } from 'deepmerge';
+import EnvDTS from 'vite-plugin-env-dts';
 
 const root = process.cwd().split(path.sep).slice(-2).join(path.sep);
 export const src = (pathname: string) => fileURLToPath(new URL(path.join(root, 'src', pathname), import.meta.url));
 
+type CustomUserConfigFn = (context: ConfigEnv & { env: Record<string, string> }) => UserConfig | Promise<UserConfig>;
+
 //TODO
 //FIX ME:tailwind.config.js这里无法使用静态导入，import()动态导入提示路径不正确
 // https://vitejs.dev/config/
-export function define(config: UserConfigExport) {
-  const newConfig = deepmerge<UserConfigExport>(
-    {
-      plugins: [DefineOptions()],
+export function define(configFn?: CustomUserConfigFn, option?: Options) {
+  return defineConfig(async (context) => {
+    let env = loadEnv(context.mode, process.cwd(), '');
+    const newContext = {
+      ...context,
+      env,
+    };
+
+    const config: UserConfigExport = {
+      plugins: [EnvDTS()],
       css: {
         postcss: {
           plugins: [
@@ -42,10 +53,10 @@ export function define(config: UserConfigExport) {
           '@types': src('../types'),
         },
       },
-    },
-    config
-  );
-  return defineConfig(newConfig);
+    };
+    const newConfig = (await configFn?.(newContext)) || {};
+    return deepmerge(config, newConfig, option);
+  });
 }
 
 export default define;

@@ -5,3 +5,4 @@ dist/
 **/yarn-lock.json
 **/*.min.js
 libs/
+vite.config*
