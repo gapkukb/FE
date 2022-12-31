@@ -38,6 +38,10 @@ export function define(configFn?: CustomUserConfigFn, option?: Options) {
           ],
         },
       },
+      optimizeDeps: {
+        include: ['intersection-observer'],
+        needsInterop: ['intersection-observer'],
+      },
       resolve: {
         alias: {
           '@': src(''),

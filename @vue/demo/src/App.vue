@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { getCurrentInstance, ref } from "vue";
-import { RouterLink, RouterView } from "vue-router";
-import HelloWorld from "./components/HelloWorld.vue";
+import { getCurrentInstance, ref } from 'vue';
+import { RouterLink, RouterView } from 'vue-router';
+import HelloWorld from './components/HelloWorld.vue';
 function handler(text: string) {
   show.value = false;
   console.log(text);
@@ -13,7 +13,10 @@ console.log(name);
 </script>
 
 <template>
-  <input type="text" v-if="show" />
+  <input
+    type="text"
+    v-if="show"
+  />
   <!-- <div
     v-debounce:1000.mouseup="handler"
     v-expand="[100]"
