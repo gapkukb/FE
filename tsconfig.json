@@ -1,5 +1,6 @@
 {
   "files": ["env.d.ts"],
+  "include": ["shared", "types"],
   "compilerOptions": {
     "module": "ESNext",
     "moduleResolution": "Node",

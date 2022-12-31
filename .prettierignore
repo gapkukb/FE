@@ -1,3 +1,12 @@
 out/
 dist/
 node_modules/
+**/*.min.js
+build/
+package-lock.json
+pnpm-lock.json
+yarn.lock
+package.json
+coverage
+**/*.bundle.*
+.github/*

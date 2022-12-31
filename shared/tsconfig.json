@@ -1,6 +1,4 @@
 {
-  "extends": "../tsconfig.common.json",
-  "exclude": ["node_modules"],
-  "include": ["**/*", "../types"],
+  "extends": "../tsconfig.json",
   "compilerOptions": {}
 }
