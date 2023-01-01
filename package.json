@@ -4,7 +4,7 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-        "clone":"node scripts/repo",
+		"clone": "node scripts/repo",
 		"preinstall": "npx only-allow pnpm",
 		"prepare": "husky install",
 		"dev": "node scripts/selector",
@@ -44,6 +44,8 @@
 		"axios": "^1.2.1",
 		"dayjs": "^1.11.7",
 		"deepmerge": "^4.2.2",
+		"i18next": "^22.4.6",
+		"i18next-browser-languagedetector": "^7.0.1",
 		"intersection-observer": "^0.12.2",
 		"lodash-es": "^4.17.21"
 	}
