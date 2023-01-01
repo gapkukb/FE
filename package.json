@@ -10,6 +10,7 @@
 		"dev": "node scripts/selector",
 		"build": "node scripts/selector build",
 		"dev:vue:demo": "pnpm -F @vue/demo dev",
+		"build:vue:demo": "pnpm -F @vue/demo build",
 		"dev:react:demo": "pnpm -F @react/demo dev",
 		"build:react:demo": "pnpm -F @react/demo build"
 	},

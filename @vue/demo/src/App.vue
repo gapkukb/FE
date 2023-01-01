@@ -13,5 +13,4 @@ export default {
     return {};
   },
 };
-await i18nextPromise;
 </script>

@@ -2,7 +2,7 @@ import { ref, computed } from 'vue';
 import { defineStore } from 'pinia';
 import storage from 'shared/storage';
 import apis from '@/apis';
-import router from '@/router';
+import router from '@/router/router-page';
 
 const userInfoKey = 'userInfo';
 
@@ -19,6 +19,7 @@ export const useUserStore = defineStore('user', () => {
 
   async function logout() {
     storage.removeItem({ key: userInfoKey });
+    user.value = {} as any;
     return apis.logout().then(() => {
       router.push('/');
     });

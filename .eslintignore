@@ -6,3 +6,4 @@ dist/
 **/*.min.js
 libs/
 vite.config*
+.fttemplates

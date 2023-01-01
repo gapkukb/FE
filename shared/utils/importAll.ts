@@ -5,8 +5,6 @@ function _genKey(key: string) {
 }
 
 export function importAll(sources: Record<string, any>, genKey: (key: string) => string = _genKey) {
-  console.log(sources);
-
   return Object.keys(sources).reduce((acc, key) => {
     const k = genKey(key);
     acc[k] = sources[key].default;

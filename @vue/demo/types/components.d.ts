@@ -7,7 +7,6 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    Demo: typeof import('./../src/components/demo/demo.vue')['default']
     HelloWorld: typeof import('./../src/components/HelloWorld.vue')['default']
     IconCommunity: typeof import('./../src/components/icons/IconCommunity.vue')['default']
     IconDocumentation: typeof import('./../src/components/icons/IconDocumentation.vue')['default']
@@ -17,13 +16,6 @@ declare module '@vue/runtime-core' {
     Languages: typeof import('./../src/components/Languages/Languages.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    TheWelcome: typeof import('./../src/components/TheWelcome.vue')['default']
-    VAppBar: typeof import('vuetify/components')['VAppBar']
     VBtn: typeof import('vuetify/components')['VBtn']
-    VFooter: typeof import('vuetify/components')['VFooter']
-    VLayout: typeof import('vuetify/components')['VLayout']
-    VMain: typeof import('vuetify/components')['VMain']
-    VNavigationDrawer: typeof import('vuetify/components')['VNavigationDrawer']
-    WelcomeItem: typeof import('./../src/components/WelcomeItem.vue')['default']
   }
 }

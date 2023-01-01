@@ -4,7 +4,8 @@
       v-for="code in codesList"
       :key="code.code"
     >
-      <button @click="$i18next.changeLanguage(code.code)">{{ code.displayName }}</button>
+      {{}}
+      <!-- <button @click="$i18next.changeLanguage(code.code)">{{ code.displayName }}</button> -->
     </li>
   </ul>
 </template>

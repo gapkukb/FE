@@ -1,14 +1,10 @@
 {
   "extends": "../tsconfig.json",
-  "include": [
-    "src",
-    "types",
-    "../types",
-    "../shared",
-    "../../types",
-    "../../shared"
-  ],
+  "include": ["src", "types", "../types", "../shared", "../../types", "../../shared"],
   "compilerOptions": {
-    "baseUrl": "."
+    "baseUrl": ".",
+    "jsx": "preserve",
+    "jsxFactory": "h",
+    "jsxFragmentFactory": "Fragment"
   }
 }
