@@ -1,0 +1,13 @@
+//子工程列表，key值必须与子工程的 package.json.name一致
+{
+  "@vue": {
+    "demo": "http://gitlab.xxx.com/demo", //示例工程
+    "demo2": "https://github.com/gapkukb/vite-plugin-env-dts.git"
+  },
+  "@react": {
+    "demo": "http://gitlab.xxx.com/demo"
+  },
+  "@uniapp": {
+    "demo": "https://github.com/gapkukb/vite-plugin-env-dts.git"
+  }
+}

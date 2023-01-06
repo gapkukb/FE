@@ -1,0 +1,6 @@
+packages:
+  - '@vue/**'
+  - '@react/**'
+  - 'shared'
+  - 'types'
+  - '!**/test/**'

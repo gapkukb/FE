@@ -1,0 +1,10 @@
+**/*.min.css
+node_modules/
+public/
+dist/
+build/
+**/*.js
+**/*.jsx
+**/*.ts
+**/*.tsx
+libs/

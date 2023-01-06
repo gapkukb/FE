@@ -1,0 +1,9 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "noEmit": true,
+    "jsx": "react-jsx"
+  },
+  "include": ["src", "types", "../types", "../shared", "../../types", "../../shared"]
+}

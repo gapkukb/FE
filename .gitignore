@@ -1,0 +1,7 @@
+node_modules
+# /@react/*/
+# !/@react/shared/
+# !/@react/types/
+# /@vue/
+# !/@vue/shared/
+# !/@vue/types/

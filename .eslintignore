@@ -1,0 +1,9 @@
+node_modules/
+dist/
+**/package-lock.json
+**/pnpm-lock.json
+**/yarn-lock.json
+**/*.min.js
+libs/
+vite.config*
+.fttemplates

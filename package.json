@@ -1,0 +1,53 @@
+{
+	"version": "1.0.0",
+	"packageManager": "pnpm@7.17.1",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"clone": "node scripts/repo",
+		"preinstall": "npx only-allow pnpm",
+		"prepare": "husky install",
+		"dev": "node scripts/selector",
+		"build": "node scripts/selector build",
+		"dev:vue:demo": "pnpm -F @vue/demo dev",
+		"build:vue:demo": "pnpm -F @vue/demo build",
+		"dev:react:demo": "pnpm -F @react/demo dev",
+		"build:react:demo": "pnpm -F @react/demo build"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^17.3.0",
+		"@commitlint/config-conventional": "^17.3.0",
+		"@types/lodash-es": "^4.17.6",
+		"@types/node": "^18.11.18",
+		"autoprefixer": "^10.4.13",
+		"eslint": "^8.30.0",
+		"eslint-config-prettier": "^8.5.0",
+		"husky": "^8.0.2",
+		"lint-staged": "^13.1.0",
+		"npm-run-all": "^4.1.5",
+		"postcss": "^8.4.20",
+		"postcss-import": "^15.1.0",
+		"prettier": "^2.8.1",
+		"prettier-plugin-tailwindcss": "^0.2.1",
+		"stylelint": "^14.16.1",
+		"stylelint-config-standard": "^29.0.0",
+		"stylelint-stylus": "^0.17.0",
+		"tailwindcss": "^3.2.4",
+		"typescript": "~4.9.4",
+		"unplugin-auto-import": "^0.12.1",
+		"vite": "4.0.3",
+		"vite-plugin-env-dts": "^1.0.5"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"axios": "^1.2.1",
+		"dayjs": "^1.11.7",
+		"deepmerge": "^4.2.2",
+		"i18next": "^22.4.6",
+		"i18next-browser-languagedetector": "^7.0.1",
+		"intersection-observer": "^0.12.2",
+		"lodash-es": "^4.17.21"
+	}
+}

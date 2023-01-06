@@ -1,0 +1,11 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  },
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "stylelint.customSyntax": "stylelint-stylus/custom-syntax",
+  "stylelint.validate": ["css", "less", "postcss", "stylus", "scss", "less", "sass"]
+}

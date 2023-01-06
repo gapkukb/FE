@@ -1,0 +1,5 @@
+{
+  "omitParentDirectory": true,
+  "customVariables": ["parentName=>red"],
+  "openFilesWhenDone": ["[FTName%pascalcase]/[FTName%pascalcase].vue"]
+}
