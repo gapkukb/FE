@@ -17,8 +17,6 @@ export const src = (pathname: string) => fileURLToPath(new URL(path.join(root, '
 
 type CustomUserConfigFn = (context: ConfigEnv & { env: Record<string, string> }) => UserConfig | Promise<UserConfig>;
 
-//TODO
-//FIX ME:tailwind.config.js这里无法使用静态导入，import()动态导入提示路径不正确
 // https://vitejs.dev/config/
 export function define(configFn?: CustomUserConfigFn, option?: Options) {
   return defineConfig(async (context) => {
