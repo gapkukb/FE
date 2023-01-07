@@ -55,10 +55,5 @@
 		"i18next-browser-languagedetector": "^7.0.1",
 		"intersection-observer": "^0.12.2",
 		"lodash-es": "^4.17.21"
-	},
-    "config": {
-        "commitizen": {
-            "path": "@commitlint/cz-commitlint"
-        }
-    }
+	}
 }
