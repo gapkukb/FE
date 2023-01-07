@@ -7,7 +7,7 @@
 		"clone": "node scripts/repo",
 		"preinstall": "npx only-allow pnpm",
 		"prepare": "husky install",
-		"commit": "git add . && git-cz",
+		"commit": "git-cz",
 		"dev": "node scripts/selector",
 		"build": "node scripts/selector build",
 		"reinstall": "node scripts/selector reinstall",
