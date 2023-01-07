@@ -7,7 +7,7 @@
 		"clone": "node scripts/repo",
 		"preinstall": "npx only-allow pnpm",
 		"prepare": "husky install",
-		"commit": "commit",
+		"commit": "git add . && git-cz",
 		"dev": "node scripts/selector",
 		"build": "node scripts/selector build",
 		"reinstall": "node scripts/selector reinstall",
@@ -19,10 +19,11 @@
 	"devDependencies": {
 		"@commitlint/cli": "^17.3.0",
 		"@commitlint/config-conventional": "^17.3.0",
-		"@commitlint/prompt-cli": "^17.4.0",
+		"@commitlint/cz-commitlint": "^17.4.0",
 		"@types/lodash-es": "^4.17.6",
 		"@types/node": "^18.11.18",
 		"autoprefixer": "^10.4.13",
+		"commitizen": "^4.2.6",
 		"eslint": "^8.30.0",
 		"eslint-config-prettier": "^8.5.0",
 		"husky": "^8.0.2",
@@ -54,5 +55,10 @@
 		"i18next-browser-languagedetector": "^7.0.1",
 		"intersection-observer": "^0.12.2",
 		"lodash-es": "^4.17.21"
-	}
+	},
+    "config": {
+        "commitizen": {
+            "path": "@commitlint/cz-commitlint"
+        }
+    }
 }
