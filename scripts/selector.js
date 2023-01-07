@@ -4,18 +4,40 @@
 const path = require('path');
 const fs = require('fs');
 const glob = require('glob');
-const child_process = require('child_process');
+const { exec } = require('./utils');
 const inquirer = require('inquirer');
-const expression = '../@(@react|@vue|@uniapp|@rn)/!(shared|types)/package.json';
-const files = glob.sync(path.join(__dirname, expression));
-const projects = {};
+const files = glob.sync('@vue/!(shared|types)/package.json');
+const projects = [];
+// 获取命令行的参数
+const arg = process.argv[2] || 'dev';
+const isReinstall = arg === 'reinstall';
+
+function command(next) {
+  return `cd ${process.cwd()} &&  ${next}`;
+}
 
 files.forEach((file) => {
   const json = JSON.parse(fs.readFileSync(file, 'utf-8'));
-  const cd = `cd ${path.join(__dirname, '../')}`;
-  const run = `pnpm -F ${json.name} ${process.argv[2] || 'dev'}`;
-  projects[json.name] = `${cd} && ${run}`;
+
+  let _command;
+  if (isReinstall) {
+    const _path = path.basename(path.join(process.cwd(), file));
+    _command = command(`npx rimraf ${_path}/node_modules/ && pnpm i`);
+  } else {
+    _command = command(`pnpm -F ${json.name} ${arg}`);
+  }
+  projects.push({
+    name: json.name,
+    command: _command,
+  });
 });
+
+if (isReinstall) {
+  projects.unshift({
+    name: '全部',
+    command: command(`npx rimraf /node_modules/ && rimraf (@vue|@react)/node_modules/  && pnpm i`),
+  });
+}
 
 inquirer
   .prompt([
@@ -23,14 +45,12 @@ inquirer
       type: 'rawlist',
       name: 'name',
       message: '请选择要运行的项目',
-      choices: Object.keys(projects),
+      choices: projects.map((item) => item.name),
     },
   ])
   .then((answers) => {
-    console.log(`正在使用 "${projects[answers.name]}"启动 ${answers.name} 服务`);
-    const child = child_process.spawn(projects[answers.name], {
-      stdio: 'inherit',
-      shell: process.platform === 'win32',
-    });
+    // console.log(`正在使用 "${projects[answers.name]}"启动 ${answers.name} 服务`);
+    const project = projects.find((item) => item.name === answers.name);
+    const child = exec(project.command);
     console.log('进程id:' + child.pid);
   });

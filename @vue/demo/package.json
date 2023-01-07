@@ -8,7 +8,8 @@
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "npx vue-tsc --noEmit",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
+    "prepare": "husky install && npx husky add .husky/pre-commit 'npm run lint' && npx husky add .husky/commit-msg 'npx --no-install commitlint --edit $1'",
+    "lint":"lint-staged"
   },
   "dependencies": {
     "@vue/shared": "workspace:*",

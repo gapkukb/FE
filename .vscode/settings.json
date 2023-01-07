@@ -1,11 +1,14 @@
 {
+  "eslint.format.enable": true,
   "editor.codeActionsOnSave": {
+    // "source.fixAll": true
     "source.fixAll.eslint": true,
     "source.fixAll.stylelint": true
   },
+  "eslint.alwaysShowStatus": true,
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
-  "stylelint.customSyntax": "stylelint-stylus/custom-syntax",
-  "stylelint.validate": ["css", "less", "postcss", "stylus", "scss", "less", "sass"]
+  "stylelint.validate": ["css", "less", "stylus", "scss", "vue", "sass", "postcss"],
+  "stylelint.snippet": ["css", "less", "postcss", "stylus", "scss", "vue", "sass"]
 }
