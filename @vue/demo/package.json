@@ -7,9 +7,7 @@
     "build": "run-p type-check build-only",
     "preview": "vite preview",
     "build-only": "vite build",
-    "type-check": "npx vue-tsc --noEmit",
-    "prepare": "husky install && npx husky add .husky/pre-commit 'npm run lint' && npx husky add .husky/commit-msg 'npx --no-install commitlint --edit $1'",
-    "lint":"lint-staged"
+    "type-check": "npx vue-tsc --noEmit"
   },
   "dependencies": {
     "@vue/shared": "workspace:*",

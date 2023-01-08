@@ -9,7 +9,7 @@ import installer from './installer';
 import App from './Suspenser.vue';
 import Popup from './Popup.vue';
 import router from './router/router-page';
-// import popupRouter from './router/popup-router';
+import popupRouter from './router/popup-router';
 
 const locales = import.meta.glob('@/locales/*/index.ts');
 
