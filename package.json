@@ -6,7 +6,7 @@
 	"scripts": {
 		"clone": "node scripts/repo",
 		"preinstall": "npx only-allow pnpm",
-		"prepare": "husky install",
+		"prepare": "husky install && npx husky add .husky/commit-msg 'npx --no-install commitlint --edit $1'",
 		"commit": "git-cz",
 		"dev": "node scripts/selector",
 		"build": "node scripts/selector build",
@@ -24,6 +24,7 @@
 		"@types/node": "^18.11.18",
 		"autoprefixer": "^10.4.13",
 		"commitizen": "^4.2.6",
+		"commitlint-config-cz": "^0.13.3",
 		"eslint": "^8.30.0",
 		"eslint-config-prettier": "^8.5.0",
 		"husky": "^8.0.2",

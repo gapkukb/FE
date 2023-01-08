@@ -12,6 +12,7 @@ importers:
       autoprefixer: ^10.4.13
       axios: ^1.2.1
       commitizen: ^4.2.6
+      commitlint-config-cz: ^0.13.3
       dayjs: ^1.11.7
       deepmerge: ^4.2.2
       eslint: ^8.30.0
@@ -52,7 +53,8 @@ importers:
       '@types/lodash-es': 4.17.6
       '@types/node': 18.11.18
       autoprefixer: 10.4.13
-      commitizen: 4.2.6
+      commitizen: 4.2.6_@types+node@18.11.18
+      commitlint-config-cz: 0.13.3
       eslint: 8.30.0
       eslint-config-prettier: 8.5.0_eslint@8.30.0
       husky: 8.0.2
@@ -554,7 +556,7 @@ packages:
       '@commitlint/load': 17.4.0_@types+node@18.11.18
       '@commitlint/types': 17.4.0
       chalk: 4.1.2
-      commitizen: 4.2.6
+      commitizen: 4.2.6_@types+node@18.11.18
       lodash.isplainobject: 4.0.6
       word-wrap: 1.2.3
     transitivePeerDependencies:
@@ -1814,6 +1816,11 @@ packages:
       picomatch: 2.3.1
     dev: true
 
+  /app-root-path/3.0.0:
+    resolution: {integrity: sha512-qMcx+Gy2UZynHjOHOIXPNvpf+9cjvk3cWrBBK7zg4gH9+clobJRb9NGzcT7mQTcV/6Gm/1WelUtqxVXnNlrwcw==}
+    engines: {node: '>= 6.0.0'}
+    dev: true
+
   /arg/4.1.3:
     resolution: {integrity: sha512-58S9QDqG0Xx27YwPSt9fJxivjYl432YCwfDMfZ+71RAqUrZef7LrKQZ3LHLOwCS4FLNBplP533Zx895SeOCHvA==}
     dev: true
@@ -2186,13 +2193,13 @@ packages:
     engines: {node: ^12.20.0 || >=14}
     dev: true
 
-  /commitizen/4.2.6:
+  /commitizen/4.2.6_@types+node@18.11.18:
     resolution: {integrity: sha512-RyTM+EiD9GO01DJUn9MRRAet3XUHGfoUZoksLfr+1ym1Xt2q5EYJs9Fg2BtKSb5Mo53i0BtMBmWMHQXVlZ/L9w==}
     engines: {node: '>= 12'}
     hasBin: true
     dependencies:
       cachedir: 2.3.0
-      cz-conventional-changelog: 3.3.0
+      cz-conventional-changelog: 3.3.0_@types+node@18.11.18
       dedent: 0.7.0
       detect-indent: 6.1.0
       find-node-modules: 2.1.3
@@ -2208,6 +2215,14 @@ packages:
     transitivePeerDependencies:
       - '@swc/core'
       - '@swc/wasm'
+      - '@types/node'
+    dev: true
+
+  /commitlint-config-cz/0.13.3:
+    resolution: {integrity: sha512-6LmCvGiFDTVSmLF0mzVVp1etMM8lAqLmPRlU7Oml1J8J9oOLadf+2g4uMTchdxOvvYLgll99SESFUHgmc6oATA==}
+    dependencies:
+      app-root-path: 3.0.0
+      lodash.clonedeep: 4.5.0
     dev: true
 
   /compare-func/2.0.0:
@@ -2365,21 +2380,22 @@ packages:
     resolution: {integrity: sha512-DJR/VvkAvSZW9bTouZue2sSxDwdTN92uHjqeKVm+0dAqdfNykRzQ95tay8aXMBAAPpUiq4Qcug2L7neoRh2Egw==}
     dev: true
 
-  /cz-conventional-changelog/3.3.0:
+  /cz-conventional-changelog/3.3.0_@types+node@18.11.18:
     resolution: {integrity: sha512-U466fIzU5U22eES5lTNiNbZ+d8dfcHcssH4o7QsdWaCcRs/feIPCxKYSWkYBNs5mny7MvEfwpTLWjvbm94hecw==}
     engines: {node: '>= 10'}
     dependencies:
       chalk: 2.4.2
-      commitizen: 4.2.6
+      commitizen: 4.2.6_@types+node@18.11.18
       conventional-commit-types: 3.0.0
       lodash.map: 4.6.0
       longest: 2.0.1
       word-wrap: 1.2.3
     optionalDependencies:
-      '@commitlint/load': 17.3.0
+      '@commitlint/load': 17.4.0_@types+node@18.11.18
     transitivePeerDependencies:
       - '@swc/core'
       - '@swc/wasm'
+      - '@types/node'
     dev: true
 
   /damerau-levenshtein/1.0.8:
@@ -3958,6 +3974,10 @@ packages:
 
   /lodash.camelcase/4.3.0:
     resolution: {integrity: sha512-TwuEnCnxbc3rAvhf/LbG7tJUDzhqXyFnv3dtzLOPgCG/hODL7WFnsbwktkD7yUV0RrreP/l1PALq/YSg6VvjlA==}
+    dev: true
+
+  /lodash.clonedeep/4.5.0:
+    resolution: {integrity: sha512-H5ZhCF25riFd9uB5UCkVKo61m3S/xZk1x4wA6yp/L3RFP6Z/eHH1ymQcGLo7J3GMPfm0V/7m1tryHuGVxpqEBQ==}
     dev: true
 
   /lodash.isfunction/3.0.9:
