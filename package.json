@@ -6,7 +6,7 @@
 	"scripts": {
 		"clone": "node scripts/repo",
 		"preinstall": "npx only-allow pnpm",
-		"prepare": "husky install && pnpx husky add .husky/pre-commit \"npx lint-staged\" && pnpx husky add .husky/commit-msg \"npx --no-install commitlint --edit $1\"",
+		"prepare": "husky install && npx husky add .husky/pre-commit \"npx lint-staged\" && npx husky add .husky/commit-msg \"npx --no-install commitlint --edit $1\"",
 		"commit": "git-cz",
 		"dev": "node scripts/selector",
 		"build": "node scripts/selector build",

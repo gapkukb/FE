@@ -7,7 +7,7 @@ import i18next from '@vue/shared/i18next';
 import { store } from './stores';
 import installer from './installer';
 import App from './Suspenser.vue';
-import Popup from './Popup.vue';
+// import Popup from './Popup.vue';
 import router from './router/router-page';
 // import popupRouter from './router/popup-router';
 
