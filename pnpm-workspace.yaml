@@ -1,6 +1,10 @@
 packages:
   - '@vue/**'
   - '@react/**'
+  - '@uni/**'
+  - '@taro/**'
+  - '@rn/**'
+  - '@phaser/**'
   - 'shared'
   - 'types'
   - '!**/test/**'

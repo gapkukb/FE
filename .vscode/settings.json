@@ -10,5 +10,9 @@
   "less.validate": false,
   "scss.validate": false,
   "stylelint.validate": ["css", "less", "stylus", "scss", "vue", "sass", "postcss"],
-  "stylelint.snippet": ["css", "less", "postcss", "stylus", "scss", "vue", "sass"]
+  "stylelint.snippet": ["css", "less", "postcss", "stylus", "scss", "vue", "sass"],
+  "conventionalCommits.gitmoji": false,
+  "conventionalCommits.promptBody": false,
+  "conventionalCommits.promptFooter": false,
+  "conventionalCommits.promptScopes": false
 }
